@@ -1,5 +1,5 @@
 import './App.css'
-import Todo from '../solution/Todo'
+import Todo from '../src/Todo.jsx'
 
 function App() {
 
