@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useMemo, useState} from 'react';
 
 // Create a component with a text input field and a button. The goal is 
 // to display an alert with the text entered when the button is clicked. 
@@ -11,9 +11,14 @@ export function Assignment2() {
     const [inputText, setInputText] = useState('');
 
     // Your code starts here
-    function showAlert() {
+    const showAlert = useMemo(() =>{
+       const trimInput = inputText.trim();
+       if(trimInput){
+           alert(inputText);
+        }
+        setInputText('');
+    },[inputText])
 
-    }
     // Your code ends here
 
     return (
